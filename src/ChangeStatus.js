@@ -7,7 +7,7 @@ const ChangeStatus = (props) => {
 
     useEffect(() => {
       fb.firestore().collection('prescriptions').doc(id).update({
-      status : 'scaned'
+      status : 'scanned'
     })
   }, [id])
 
