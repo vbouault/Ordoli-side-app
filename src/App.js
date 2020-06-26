@@ -1,22 +1,24 @@
 import React, { useEffect } from 'react';
-import fb from './firebase';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
+import ChangeStatus from './ChangeStatus';
+
 
 
 function App() {
 
-    /* const id = window.location.href.split('/')[window.location.href.split('/').length - 1] */
-    const id = 'PXl9JBptuLOd4kqNfrIE'  
-    useEffect(() => {
-        fb.firestore().collection('prescriptions').doc(id).update({
-          status : 'ok'
-        })
-    }, [])
-
   return (
+    <Router>
     <div className="App">
-    
+      <Switch>
+        <Route exact path='/:id' component={ChangeStatus}/>
+      </Switch>
     </div>
+    </Router>
   );
 }
 
