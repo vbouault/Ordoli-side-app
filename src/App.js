@@ -14,8 +14,8 @@ function App() {
 
   return (
     <Router>
-      <Link to='/BWKkkWp4R8q4B0GoetnC' >BWKkkWp4R8q4B0GoetnC</Link>
     <div className="App">
+    <Link to='/BWKkkWp4R8q4B0GoetnC' >BWKkkWp4R8q4B0GoetnC</Link>
       <Switch>
         <Route exact path='/:id' component={ChangeStatus}/>
       </Switch>
