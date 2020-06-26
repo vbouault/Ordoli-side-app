@@ -1,14 +1,15 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import fb from './firebase';
 
 const ChangeStatus = (props) => {
-      const id = props.match.params.id;
 /*       const id = 'PXl9JBptuLOd4kqNfrIE'   */
-      useEffect(() => {
+  const [id, setId] = useState(props.match.params.id)
+
+    useEffect(() => {
       fb.firestore().collection('prescriptions').doc(id).update({
       status : 'scaned'
     })
-  }, [])
+  }, [id])
 
   return (
     <div>
