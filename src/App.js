@@ -15,9 +15,9 @@ function App() {
   return (
     <Router>
     <div className="App">
-    <Link to='/BWKkkWp4R8q4B0GoetnC' >BWKkkWp4R8q4B0GoetnC</Link>
+    hello
       <Switch>
-        <Route exact path='/:id' component={ChangeStatus}/>
+        <Route path='/:id' component={ChangeStatus}/>
       </Switch>
     </div>
     </Router>
