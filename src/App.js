@@ -4,7 +4,6 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Link
 } from 'react-router-dom';
 import ChangeStatus from './ChangeStatus';
 
@@ -15,7 +14,7 @@ function App() {
   return (
     <Router>
     <div className="App">
-    hello
+      <h1>hello</h1>
       <Switch>
         <Route path='/:id' component={ChangeStatus}/>
       </Switch>
