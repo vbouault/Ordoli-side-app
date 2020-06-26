@@ -13,7 +13,7 @@ const ChangeStatus = (props) => {
 
   return (
     <div>
-      coucou
+      Your presciption has been scanned 
     </div>
   )
 }
